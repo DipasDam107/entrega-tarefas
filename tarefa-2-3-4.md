@@ -1,4 +1,5 @@
 # TAREAS 2, 3 Y 4 - MYSQL
+Como estas tareas conjuntamente son bastante cortas, opto por incluirlas todas en un mismo documento.
 
 # Indice
 - [Instalacion MYSQL](#instalar-mysql-server-en-linux)
@@ -11,6 +12,7 @@
 - [Crear bases de datos MYSQL](#crear-bases-de-datos-en-mysql)
   - [Base de datos de Investigacion](#base-de-datos-de-investigacion)
   - [Base de datos de Naves Espaciales](#base-de-datos-de-naves-espaciales)
+- [Conclusiones](#conclusiones)
 
 # Instalar MYSQL Server en Linux
 Para instalar MYSQL Server lo primero que tenemos que hacer es actualizar la lista de paquetes disponibles en los repositorios:
@@ -334,5 +336,10 @@ Vemos información de cada tabla con el comando `DESC`:
 ![image](./img/mysql13.png "Logo Title Text 1")
 
 ![image](./img/mysql14.png "Logo Title Text 1")
+
+[Volver al Indice](#indice)
+
+# Conclusiones
+Como se puede observar, las diferencias entre los scripts de creación de las bases de datos para PostgreSQL y MYSQL no varían en demasía salvo en algunos tipos de datos, que pueden ser compatibles para uno y no para otro (Por ejemplo el campo SERIAL no existe en MYSQL como tal, hay que usar AUTO-INCREMENT). Esto se debe a que practicamente todo lo visto anteriormente se encuentra estandarizado y es utilizado comunmente por múltiples sistemas gestores de base de datos.
 
 [Volver al Indice](#indice)
