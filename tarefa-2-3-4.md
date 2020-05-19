@@ -2,6 +2,12 @@
 
 # Indice
 - [Instalacion MYSQL](#instalar-mysql-server-en-linux)
+- [Comandos MYSQL](#comandos-mysql)
+	- [Mostrar BDs](#mostrar-bases-de-datos)
+	- [Usar BD](#usar-base-de-datos)
+	- [Mostrar Tablas](#mostrar-tablas)
+	- [Info de Tabla](#mostrar-informacion-de-tabla)
+	- [Otros](#otros)
 - [Crear bases de datos MYSQL](#crear-bases-de-datos-en-mysql)
   - [Base de datos de Investigacion](#base-de-datos-de-investigacion)
   - [Base de datos de Naves Espaciales](#base-de-datos-de-naves-espaciales)
@@ -26,6 +32,51 @@ Ya entramos en el intérprete de comandos de MYSQL, hacemos pruebas creando una 
 Comprobamos las bases de datos existentes:
 
 ![image](./img/mysql5.png "Logo Title Text 1")
+
+[Volver al Indice](#indice)
+
+# Comandos MYSQL
+Además de las instrucciones SQL vistas hasta ahora, destaco algunos comandos para utilizar MYSQL, mostrar estructura de la información y datos.
+
+## Mostrar Bases de datos
+Muestra todas las bases de datos disponibles en un momento dado. Estructura:
+
+```sql
+SHOW DATABASES;
+```
+
+[Volver al Indice](#indice)
+
+## Usar Base de datos
+Indica como activa una base de datos específica. De esta manera, MYSQL sabe sobre que base de datos ha de aplicar las operaciones que le indicamos. Estructura:
+
+```sql
+USE <Base_de_datos>;
+```
+
+[Volver al Indice](#indice)
+
+## Mostrar tablas
+Muestra todas las tablas de la base de datos activa. Estructura:
+
+```sql
+SHOW TABLES;
+```
+
+[Volver al Indice](#indice)
+
+
+## Mostrar Información de Tabla
+Muestra información de la tabla especificada, que está dentro de la BD activa. Estructura:
+
+```sql
+DESC <Nombre_Tabla>;
+```
+
+[Volver al Indice](#indice)
+
+## Otros
+Mas allá de los descritos anteriormente, para acceder a la información de cada tabla se siguen usando consultas de tipo SELECT. Igualmente instrucciones de tipo DDL o DML tales como CREATE, DELETE o UPDATE siguen siendo válidas, pero no las voy a volver a explicar en este apartado.
 
 [Volver al Indice](#indice)
 
