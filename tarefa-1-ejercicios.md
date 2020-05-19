@@ -281,7 +281,7 @@ Ahora probemos simplemente a actualizar el valor de los registros. En cualquiera
 ## BD movies
 La base de datos movies es muy similar a la anterior, con lo cual no me voy a parar mucho en la misma.
 
-![image](../img/pelis.png "Logo Title Text 1")
+![image](./img/pelis.png "Logo Title Text 1")
 
 ### Crear BD Movies
 ```SQL
