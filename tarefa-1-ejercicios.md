@@ -30,6 +30,8 @@ Vamos a intentar recrear esta tabla de SQLZOO y trabajar con ella.
 
 ![image](./img/tabla1.png "Logo Title Text 1")
 
+[Volver al Indice](#indice)
+
 ### Creando tabla world
 Para crear la tabla world, es necesario utilizar la instrucción CREATE TABLE:
   > CREATE TABLE nombre tabla (campo1 tipo, campo2 tipo....);
@@ -59,6 +61,7 @@ Podríamos hacer un SELECT ahora de la misma tabla para ver si se ha creado corr
 
 ![image](./img/img17.png "Logo Title Text 1")
 
+[Volver al Indice](#indice)
 
 ### Metiendo Datos
 Para introducir datos en la tabla antes creada usamos la instrucción INSERT:
@@ -91,8 +94,12 @@ A este punto tendríamos los siguientes datos:
 
 ![image](./img/img22.png "Logo Title Text 1")
 
+[Volver al Indice](#indice)
+
 ## BD nobel
 ![image](./img/nobel.png "Logo Title Text 1")
+
+[Volver al Indice](#indice)
 
 ### Creando tabla nobel
 La tabla nobel tampoco cuenta con claves ajenas con lo cual es muy similar a la anterior. Sin embargo, podemos empezar a introducir algunas restricciones nuevas, como por ejemplo NOT NULL, la cual impide que el campo al que afecta pueda tomar el valor NULL en las inserciones de datos:
@@ -138,6 +145,8 @@ INSERT INTO nobel.nobel (yr,winner) VALUES (2960,'Daniel Dipas');
 
 Este insert violaría la regla NOT NULL del campo subject, con lo cual no se permite su inserción:
 
+[Volver al Indice](#indice)
+
 ## BD goal
 ![image](./img/tablaJoin.png "Logo Title Text 1")
 
@@ -145,7 +154,9 @@ La base de datos goal gana en complejidad por varios hechos:
 	- En primer lugar, contamos con varias tablas relacionadas entre ellas, con lo cual tendremos que unirlas con FOREIGN KEY
 	- Existe una dependencia en identificación: Solo queremos goles de los partidos existentes. Si borramos un partido, los goles del mismo se van fuera.
 	- Por no utilizar todo borrados CASCADE, voy a jugar con valores por defecto en caso de que se borre un equipo.
-	
+
+[Volver al Indice](#indice)
+
 ### Creando la BD
 En primer lugar empezamos definiendo el nuevo esquema y la primera tabla, que será eteam. Muy importante recordar lo siguiente:
 	- Si pretendemos definir tablas y relaciones simultaneamente, deben introducirse primero las tablas que no tienen relación y posteriormente las siguientes de manera sucesiva.
@@ -204,6 +215,8 @@ CREATE TABLE goal.goal(
 ```
 Para finalizar, con el CHECK compruebo que el gol está comprendido entre el minuto 0 y 120 (prórroga). 
 
+[Volver al Indice](#indice)
+
 ### Codigo final
 ```SQL
 CREATE SCHEMA goal;
@@ -238,6 +251,8 @@ CREATE TABLE goal.goal(
 );
 
 ```
+
+[Volver al Indice](#indice)
 
 ### Introducir datos
 Empezamos introduciendo datos válidos, siempre teniendo en cuenta el orden de implementación (No podemos introducir datos en game sin tener equipos a los que referenciar). La única particularidad de este ejercicio es la siguiente:
@@ -278,10 +293,14 @@ Ahora probemos simplemente a actualizar el valor de los registros. En cualquiera
 ![image](./img/ejemploupdate1.png  "Logo Title Text 1")
 ![image](./img/ejemploupdate2.png  "Logo Title Text 1")
 
+[Volver al Indice](#indice)
+
 ## BD movies
 La base de datos movies es muy similar a la anterior, con lo cual no me voy a parar mucho en la misma.
 
 ![image](./img/pelis.png "Logo Title Text 1")
+
+[Volver al Indice](#indice)
 
 ### Crear BD Movies
 ```SQL
@@ -311,6 +330,8 @@ CREATE TABLE movies.casting(
 	FOREIGN KEY (actorid) REFERENCES actor(id) ON UPDATE CASCADE ON DELETE SET NULL
 );
 ```
+
+[Volver al Indice](#indice)
 
 # Borrando esquema y tablas
 Para crear un `SCHEMA` usamos la instrucción:
@@ -345,6 +366,8 @@ Igual que pasó antes, la tabla podría tener objetos hijos los cuales impedirí
 
 ![image](./img/capt4.png "Logo Title Text 1")
 
+[Volver al Indice](#indice)
+
 # Adición y borrado de columnas
 Para añadir una columna a una tabla existente usamos la siguiente estructura:
 
@@ -361,6 +384,8 @@ ALTER TABLE <nombreTabla> DROP COLUMN <nombrecolumna>;
 ```
 
 ![image](./img/capt13.png "Logo Title Text 1")
+
+[Volver al Indice](#indice)
 
 # Adición y borrado de restricciones
 Para añadir una restricción usamos la siguiente sentencia:
@@ -386,6 +411,7 @@ ALTER TABLE <nombreTabla> DROP CONSTRAINT <nombre>;
 
 ![image](./img/capt8.png "Logo Title Text 1")
 
+[Volver al Indice](#indice)
 
 # Inserción, Modificación y Borrado de tuplas
 Hago un insert con válidos:
@@ -408,6 +434,8 @@ DELETE FROM <nombretabla> WHERE (predicado);
 ```
 Borro aquellas tuplas cuyo campo nombre empiece por J:
 ![image](./img/capt9.png "Logo Title Text 1")
+
+[Volver al Indice](#indice)
 
 # Ejercicio 1 Proyectos de Investigacion
 ```SQL
@@ -527,6 +555,8 @@ Suposiciones (Pendientes de añadir):
 - Podria usarse un assert para comprobar que todo el dinero de financiacion se invierte en el proyecto (Orzamento, Financiacion)
 - Comprobar las fechas de fin y cese de participa se corresponden con las fechas de inicio y fin del proyecto. Otro assert
 
+[Volver al Indice](#indice)
+
 # Ejercicio 2 Naves Espaciales
 ```sql
 DROP SCHEMA IF EXISTS Naves_Espaciais CASCADE;
@@ -633,6 +663,7 @@ Suposiciones:
 		- La clave de servicio es un codigo de 9 caracteres
 	- SERIAL es un entero autoincrementado. Como no nos interesa que los campos que referencian a un SERIAL se autoincrementen tambien, hacemos que sean enteros
 		
+[Volver al Indice](#indice)
 
 ---------------------
 
