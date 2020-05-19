@@ -66,7 +66,7 @@ SHOW TABLES;
 [Volver al Indice](#indice)
 
 
-## Mostrar Información de Tabla
+## Mostrar Informacion de Tabla
 Muestra información de la tabla especificada, que está dentro de la BD activa. Estructura:
 
 ```sql
