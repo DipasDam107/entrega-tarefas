@@ -1,6 +1,8 @@
-# Entrega de tarefas 1 a 4
+# Secciones Tarea 1
+- [Tarefa 1 - Apuntes DDL y DML](./tarefa-1.md)
+- [Tarefa 1 - Elephant SQL](./tarefa-1.md)
+- [Tarefa 1 - Ejercicios DDL y DML](./tarefa-1.md)
 
-- [Tarefa 1](./tarefa-1.md)
-- [Tarefa 2](./tarefa-2.md)
-- [Tarefa 3](./tarefa-3.md)
-- [Tarefa 4](./tarefa-4.md)
+# Resto de tareas
+- [Tarefa 2,3 y 4 - MYSQL en Linux](./tarefa-2.md)
+
