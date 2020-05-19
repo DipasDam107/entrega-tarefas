@@ -28,7 +28,7 @@ Para empezar a probar las instrucciones CREATE e INSERT voy a recrear las BDs de
 ## BD World
 Vamos a intentar recrear esta tabla de SQLZOO y trabajar con ella.
 
-![image](../img/tabla1.png "Logo Title Text 1")
+![image](./img/tabla1.png "Logo Title Text 1")
 
 ### Creando tabla world
 Para crear la tabla world, es necesario utilizar la instrucción CREATE TABLE:
