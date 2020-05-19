@@ -92,7 +92,7 @@ A este punto tendríamos los siguientes datos:
 ![image](./img/img22.png "Logo Title Text 1")
 
 ## BD nobel
-![image](../img/nobel.png "Logo Title Text 1")
+![image](./img/nobel.png "Logo Title Text 1")
 
 ### Creando tabla nobel
 La tabla nobel tampoco cuenta con claves ajenas con lo cual es muy similar a la anterior. Sin embargo, podemos empezar a introducir algunas restricciones nuevas, como por ejemplo NOT NULL, la cual impide que el campo al que afecta pueda tomar el valor NULL en las inserciones de datos:
@@ -139,7 +139,7 @@ INSERT INTO nobel.nobel (yr,winner) VALUES (2960,'Daniel Dipas');
 Este insert violaría la regla NOT NULL del campo subject, con lo cual no se permite su inserción:
 
 ## BD goal
-![image](../img/tablaJoin.png "Logo Title Text 1")
+![image](./img/tablaJoin.png "Logo Title Text 1")
 
 La base de datos goal gana en complejidad por varios hechos:
 	- En primer lugar, contamos con varias tablas relacionadas entre ellas, con lo cual tendremos que unirlas con FOREIGN KEY
@@ -635,17 +635,4 @@ Suposiciones:
 		
 
 ---------------------
-Ejercicio de prueba:
 
-```sql
-
--- A FOREIGN KEY de profesor esta mal. Hacer una nueva con B:N M:R
-
-ALTER TABLE Profesor
-	DROP CONSTRAINT FK_Grupo_Profesor;
-
-ALTER TABLE Profesor
-	ADD CONSTRAINT FK_GP_Profesor FOREIGN KEY (Nome_Grupo, Nome_Departamento)
-	REFERENCES Proyectos_Investigacion.Grupo (Nome_Grupo, Nome_Departamento) 
-	ON DELETE SET NULL ON UPDATE NO ACTION;
-```
